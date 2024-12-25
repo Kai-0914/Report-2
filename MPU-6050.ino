@@ -23,7 +23,7 @@ void loop() {
   int16_t accX = Wire.read() << 8 | Wire.read();
   int16_t accY = Wire.read() << 8 | Wire.read();
   int16_t accZ = Wire.read() << 8 | Wire.read();
-  int16_t temp = Wire.read() << 8 | Wire.read();
+
   int16_t gyroX = Wire.read() << 8 | Wire.read();
   int16_t gyroY = Wire.read() << 8 | Wire.read();
   int16_t gyroZ = Wire.read() << 8 | Wire.read();
@@ -38,11 +38,6 @@ void loop() {
   Serial.print("X = "); Serial.print(gyroX);
   Serial.print(" | Y = "); Serial.print(gyroY);
   Serial.print(" | Z = "); Serial.println(gyroZ);
-
-  // Print the temperature (in degrees Celsius)
-  Serial.print("Temperature: ");
-  Serial.print((temp / 340.00) + 36.53); // Formula from datasheet
-  Serial.println(" C");
 
   delay(1000); // Delay a second for next reading
 }
