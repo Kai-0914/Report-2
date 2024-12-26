@@ -4,8 +4,6 @@ const int ENA = 3;
 const int IN3 = A2; 
 const int IN4 = A3;   
 const int ENB = 11;
-
-int motorSpeed = 0;
 int motorSpeedA = 0;
 int motorSpeedB = 0;
 
