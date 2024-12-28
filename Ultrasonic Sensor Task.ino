@@ -44,10 +44,9 @@ void loop() {
   Serial.println(distance);
 
   if (distance > 0 && distance < distanceThreshold) {
-    // Object detected within threshold, stop the car
     stopMotor();
     Serial.println("Object detected! Stopping.");
-    delay(2000); // Pause for 2 seconds
+    delay(2000);
   } else {
     moveForward();
   }
